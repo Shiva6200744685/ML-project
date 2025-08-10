@@ -1,5 +1,8 @@
 import logging
+import sys
 import os
+from pathlib import Path
+sys.path.append(str(Path('src').parent.parent))  
 from datetime import datetime
 
 LOG_FILE=f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
@@ -15,3 +18,5 @@ logging.basicConfig(
 
 
 )
+if __name__=="__main__":
+    logging.info("logging has started")

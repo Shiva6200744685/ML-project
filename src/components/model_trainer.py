@@ -1,5 +1,7 @@
 import os
 import sys
+from pathlib import Path
+sys.path.append(str(Path('src').parent.parent))  
 from dataclasses import dataclass
 
 from catboost import CatBoostRegressor
